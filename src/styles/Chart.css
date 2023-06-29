@@ -1,0 +1,100 @@
+.chart {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 90%;
+   height: auto;
+   background: #fff;
+   border-radius: 25px;
+   padding: 1em 1.5em;
+   gap: 1em;
+   cursor: pointer;
+}
+
+.chart-top {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.chartSettings {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1em;
+}
+
+.chart-main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   overflow: hidden;
+   gap: .5em;
+}
+
+.dropdown {
+   padding: 5px;
+   border: none;
+   background: #e2e2e2;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.dropdown:focus {
+   outline: none;
+}
+
+.moreSetting {
+   background: #e2e2e2;
+   display: flex;
+   padding: 5px;
+   align-items: center;
+   justify-self: center;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.moreSetting > span {
+   font-size: 15px;
+}
+
+.info {
+   display: flex;
+   display: none;
+   width: 100%;
+   font-size: .9em;
+   justify-content: space-between;
+   gap: .5em;
+}
+
+.i {
+   display: flex;
+   gap: 5px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.chartLines {
+   width: 95%;
+}
+
+@media (min-width: 585px) {
+   .chartSettings {
+      flex-direction: row;
+   }
+   .info {
+      gap: 0;
+   }
+   .i {
+      gap: .8em;
+   }
+}
+
+@media (min-width: 425px) {
+   .info {
+      display: flex;
+   }
+}

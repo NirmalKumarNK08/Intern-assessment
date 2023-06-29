@@ -1,0 +1,54 @@
+/* Mainpanel designs*/
+.subContainer-2 {
+   max-width: 100%;
+   height: auto;
+   border-top-left-radius: 3em;
+   border-top-right-radius: 3em;
+   background-color: #E4F1FF;
+   padding: 2em;
+}
+
+.Container {
+   display: flex;
+   height: auto;
+   flex-direction: column;
+   gap: 2em;
+   align-items: center;
+   max-width: 100%;
+}
+
+.topContent {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.logo-settings {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.logo {
+   font-size: 3em;
+}
+
+.logo-settings > button {
+   border: none;
+   background: transparent;
+}
+
+@media (min-width: 768px) {
+   .subContainer-2 {
+      border-top-left-radius: 3em;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 3em;
+      width: 100%;
+   }
+}
+
+@media (max-width: 500px) {
+   .logo-settings {
+      display: none;
+   }
+}

@@ -1,0 +1,236 @@
+.cardsContainer {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1em;
+}
+.cardComponents {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   width: 100%;
+   gap: 1em;
+}
+.humidity, .wind, .percipitation, .uvIndex, .feels, .chance {
+   height: 8.5em;
+   width: 100%;
+   border-radius: 2em;
+   background-color: #fff;
+   padding: 20px;
+   cursor: pointer;
+}
+
+.humidity > .top, 
+.wind > .top, 
+.percipitation > .top, 
+.uvIndex > .top,
+.feels > .top,
+.chance > .top
+{
+   padding: 5px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.icon {
+   background-color: #5C9CE5;
+   color: #fff;
+   border-radius: 10px;
+   padding: 5px;
+}
+
+.humidity > .middle, 
+.wind > .middle, 
+.percipitation > .middle,
+.uvIndex > .middle,
+.feels > .middle,
+.chance > .middle
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.humidity > .last,
+.wind > .last, 
+.percipitation > .last,
+.uvIndex > .last,
+.feels > .last,
+.chance > .last
+{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   color: #cacaca;
+}
+
+.feels > .last {
+   width: 100%;
+}
+
+.bar-1, .bar-2, .bar-3,
+.pBar-1, .pBar-2, .pBar-3, .pBar-4, .pBar-5, .pBar-6, .pBar-7, .pBar-8, .pBar9,
+.uvBar-1, .uvBar-2, .uvBar-3, .uvBar-4, .uvBar-5, .uvBar-6, .uvBar-7, .uvBar-8, .uvBar-9,
+.fBar-1, 
+.wBar-1, .wBar-2, .wBar-3, .wBar-4, .wBar-5 {
+   height: 15px;
+   width: 3em;
+   background-color: #e2e2e2;
+   position: relative;
+   border-radius: 10px;
+}
+
+.detail {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.fBar-1 {
+   height: 15px;
+   width: 15em;
+}
+
+.pBar-1, .pBar-2, .pBar-3, .pBar-4, .pBar-5, .pBar-6, .pBar-7, .pBar-8, .pBar-9 {
+   height: 15px;
+   width: 20px;
+}
+.uvBar-1, .uvBar-2, .uvBar-3, .uvBar-4, .uvBar-5, .uvBar-6, .uvBar-7, .uvBar-8, .uvBar-9 {
+   height: 15px;
+   width: 35px;
+}
+
+.percent-1, .percent-2, .percent-3,
+.pPercent-1, .pPercent-2,
+.uvPercent-1, .uvPercent-2,
+.fPercent-1,
+.wPercent-1, .wPercent-2 {
+   width: 100%;
+   height: 15px;
+   border-radius: 10px;
+   background-color: #5C9CE5;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.percent-3, .pPercent-2, .uvPercent-2, .fPercent-1 {
+   width: 70%;
+}
+
+.wLast {
+   height: 6.5em;
+   /* width: 100%; */
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   border-top-left-radius: 50%;
+   border-top-right-radius: 50%;
+}
+
+.indicator {
+   display: flex;
+   height: 10em;
+   width: 70%;
+   border-radius: 50%;
+   flex-direction: column;
+   align-items: center;
+   position: absolute;
+}
+
+.line {
+   border-left: 3px solid transparent;
+   border-right: 4px solid transparent;
+   border-bottom: 20px solid #5C9CE5;
+}
+
+.indicatorLine {
+   gap: 2px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   transform: skew(50deg, -50deg);
+}
+
+.indicatorDot {
+   height: 7px;
+   width: 7px;
+   border-radius: 50%;
+   background-color: #5C9CE5;
+}
+
+.wBar-container {
+  width: 100%; 
+  height: 5em; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wBar {
+   height: 15px;
+   width: 35px;
+   border-radius: 10px;
+   background-color: #5C9CE5; 
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   transform: translate(-50%, -50%); 
+}
+
+.wBar > p {
+   position: absolute;
+   top: -125%;
+   color: #cacaca;
+}
+
+.wBar:nth-child(1) {
+  transform: rotate(130deg) translate(50px, 60px) rotate(-180deg);
+}
+
+.wBar:nth-child(2) {
+  transform: rotate(190deg) translate(50px, 25px) rotate(-225deg);
+}
+
+.wBar:nth-child(3) {
+  transform: rotate(270deg) translate(50px) rotate(-270deg);
+  background-color: #e2e2e2;
+}
+
+.wBar:nth-child(4) {
+  transform: rotate(-190deg) translate(-50px, 25px) rotate(225deg);
+  background-color: #e2e2e2;
+}
+
+.wBar:nth-child(5) {
+  transform: rotate(-130deg) translate(-50px, 60px) rotate(180deg);
+  background-color: #e2e2e2;
+}
+
+@media (min-width: 467px) {
+   .cardComponents {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-content: center;
+      align-items: center;
+   }
+   .humidity, .wind, .percipitation, .uvIndex, .feels, .chance {
+      width: 80%;
+   }
+   
+}
+
+@media (min-width: 928px) {
+   .cardComponents {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+   }
+}

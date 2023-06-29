@@ -1,0 +1,131 @@
+/* Sidepanel designs */
+.subContainer-1 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 10px;
+   max-width: 100%;
+   height: 70vh;
+   color: #fff;
+}
+
+button {
+   border: none;
+}
+
+.topBtns {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.addbtn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 2.5em;
+   width: 2.5em;
+   border-radius: 11px;
+   color: #5C9CE5;
+   cursor: pointer;
+}
+.addbtn:hover {
+   box-shadow: 0 0 10px #00000072;
+}
+
+.dotBtns > .dot {
+   background-color: #ccccccb6;
+   margin-left: 5px;
+   height: 10px;
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
+}
+
+.dot.active {
+  width: 25px;
+  border-radius: 30%;
+  background-color: #fff;
+}
+
+.toggleInput {
+   font-size: .8em;
+}
+
+.middle-location, .middle-date {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.location-contents, .time-contents {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.bottomCelcius {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.celcius-details, .weather-name {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+.celcius-details > button {
+   background-color: transparent;
+   color: #fff;
+   cursor: pointer;
+}
+
+.toggle-switch {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 10px;
+  background-color: #ccc;
+  outline: none;
+  border-radius: 30px;
+  transition: all .3s ease-in-out;
+}
+
+.toggle-switch::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.toggle-switch::-webkit-slider-thumb:hover {
+  background-color: #dddddd;
+}
+.toggle-switch[value="0"] {
+  background-color: #ccc;
+}
+.toggle-switch[value="1"] {
+  background-color: #4caf50;
+}
+
+/* Responsive Design */
+@media (min-width: 426px) {
+   .subContainer-1 {
+      padding: 3em;
+   }
+}
+
+@media (min-width: 768px) {
+   .subContainer-1 {
+      margin: 0;
+      padding: 0 3em;
+   }
+}
+
